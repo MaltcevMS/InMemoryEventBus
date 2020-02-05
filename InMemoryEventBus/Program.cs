@@ -1,4 +1,6 @@
 ﻿using System;
+using InMemoryEventBus.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace InMemoryEventBus
 {
@@ -6,7 +8,7 @@ namespace InMemoryEventBus
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }
