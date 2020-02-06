@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+	<LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common.Infrastructure\Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\GameFactory.Domain\GameFactory.Domain.csproj" />
+    <ProjectReference Include="..\InMemoryEventBus.Infrastructure\InMemoryEventBus.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
