@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GameFactoryService\GameFactory.Service.csproj" />
+    <ProjectReference Include="..\GameFactory.Service\GameFactory.Service.csproj" />
     <ProjectReference Include="..\InMemoryEventBus.Infrastructure\InMemoryEventBus.Infrastructure.csproj" />
   </ItemGroup>
 

@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InMemoryEventBus", "InMemoryEventBus\InMemoryEventBus.csproj", "{F28900C6-F63B-4F91-A94D-0AC222D63259}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InMemoryEventBus", "..\src\InMemoryEventBus\InMemoryEventBus.csproj", "{F28900C6-F63B-4F91-A94D-0AC222D63259}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InMemoryEventBus.Infrastructure", "InMemoryEventBus.Infrastructure\InMemoryEventBus.Infrastructure.csproj", "{C6CB1226-306F-402F-AF3D-47FFD64C70D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InMemoryEventBus.Infrastructure", "..\src\InMemoryEventBus.Infrastructure\InMemoryEventBus.Infrastructure.csproj", "{C6CB1226-306F-402F-AF3D-47FFD64C70D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameFactory.Service", "GameFactoryService\GameFactory.Service.csproj", "{EA9D23C8-5F02-411D-927B-B56664BFC447}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameFactory.Service", "..\src\GameFactory.Service\GameFactory.Service.csproj", "{EA9D23C8-5F02-411D-927B-B56664BFC447}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameFactory.Domain", "GameFactory.Domain\GameFactory.Domain.csproj", "{73FDB642-9F7B-4A0B-B2A8-C7FFF1F2183B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameFactory.Domain", "..\src\GameFactory.Domain\GameFactory.Domain.csproj", "{73FDB642-9F7B-4A0B-B2A8-C7FFF1F2183B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infrastructure", "Common.Infrastructure\Common.Infrastructure.csproj", "{33FF2650-53E9-4A70-866D-A21E8543B7BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infrastructure", "..\src\Common.Infrastructure\Common.Infrastructure.csproj", "{33FF2650-53E9-4A70-866D-A21E8543B7BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
