@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace InMemoryEventBus.Infrastructure
 {
@@ -11,10 +9,10 @@ namespace InMemoryEventBus.Infrastructure
         private readonly IList<Type> _subscribedEventHandlerTypes;
         private readonly IServiceProvider _serviceProvider;
 
-        public EventBus(IList<Type> subscribedEventHandlerTypes, IServiceProvider serviceProvider)
+        public EventBus(IServiceProvider serviceProvider)
         {
-            _subscribedEventHandlerTypes = subscribedEventHandlerTypes;
             _serviceProvider = serviceProvider;
+            _subscribedEventHandlerTypes = new List<Type>();
         }
 
         public IEventBus Subscribe<T>()
@@ -27,17 +25,17 @@ namespace InMemoryEventBus.Infrastructure
         {
             foreach (var handler in GetHandlers<T>())
             {
-                await handler.TryHandle(@event).ConfigureAwait(false);
+                await handler.TryHandleAsync(@event).ConfigureAwait(false);
             }
         }
 
-        private IEnumerable<ICanHandleAsync<T>> GetHandlers<T>()
+        private IEnumerable<ICanHandle<T>> GetHandlers<T>()
         {
             foreach (var handlerType in _subscribedEventHandlerTypes)
             {
-                if (typeof(ICanHandleAsync<T>).IsAssignableFrom(handlerType))
+                if (typeof(ICanHandle<T>).IsAssignableFrom(handlerType))
                 {
-                    yield return (ICanHandleAsync<T>) _serviceProvider.GetService(handlerType);
+                    yield return (ICanHandle<T>) _serviceProvider.GetService(handlerType);
                 }
             }
         }

@@ -2,8 +2,8 @@
 
 namespace InMemoryEventBus.Infrastructure
 {
-    public interface ICanHandleAsync<in T>
+    public interface ICanHandle<in T>
     {
-        Task<bool> TryHandle(T @event);
+        Task<bool> TryHandleAsync(T @event);
     }
 }
